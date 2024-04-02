@@ -8,7 +8,7 @@ function Calculadora(){
     const valorAnterior = useRef('');
     const operacion = useRef('');
     useEffect(()=>{
-        display.current.textContent = valor;
+        display.current.textContent = Number(valor).toFixed(4);
     },[valor]);
 
     function handleAddNumber(n){
@@ -46,7 +46,7 @@ function Calculadora(){
     }
 
     return(
-        <div className="w-[300px] h-[350px] bg-slate-900 flex flex-col items-center justify-center m-10 rounded-xl">
+        <div className="w-[300px] h-[350px] bg-slate-900 flex flex-col items-center justify-center m-2 rounded-xl">
             <div id="display" className="w-[90%] h-[10%] bg-slate-200 m-4 rounded-md">
                 <p id="" ref={display} className="text-slate-400 text-2xl px-2 text-right">hola</p>
             </div> 
